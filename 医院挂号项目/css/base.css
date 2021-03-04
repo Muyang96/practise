@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 11px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

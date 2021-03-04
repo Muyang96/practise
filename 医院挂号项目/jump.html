@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/jump.css" type="text/css" rel="stylesheet" />
+    <link href="css/base.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- top区域开始 -->
+    <section class="top">
+        <div class="container">
+            <div class="fl top-img"></div>
+            <p class="fl top-text">010-114/116114电话预约</p>
+            <p class="fr top-text top-text-right">
+                <span class="fl">欢迎来到城市预约挂号同一平&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请</span>
+                <a href="javascript:;" class="fl">登录</a>
+                <a href="javascript:;" class="fl">注册</a>
+                <a href="javascript:;" class="fl">帮助中心</a>
+            </p>
+        </div>
+    </section>
+    <!-- top区域结束 -->
+    <!-- header区域开始 -->
+    <section class="header">
+        <div class="container">
+            <div class="logo fl"></div>
+            <div class="searchBar fr" id="searchBar">
+                <p>
+                    <span class="search-text" @mouseenter="showEvent" @mouseout="hideEvent">{{msg}}</span>
+                    <ul class="searchBar-hide" v-show="ifshow" @mouseenter="showEvent" @mouseout="hideEvent">
+                        <li @mouseenter="mouseOver(1)" @mouseout="mouseLeave(1)" @click="clickOption(1)">科室</li>
+                        <li @mouseenter="mouseOver(2)" @mouseout="mouseLeave(2)" @click="clickOption(2)">疾病</li>
+                        <li @mouseenter="mouseOver(3)" @mouseout="mouseLeave(3)" @click="clickOption(3)">医院</li>
+                    </ul>
+                    <form>
+                        <input type="search" / value="请输入搜索内容" class="search-input">
+                    </form>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- header区域结束 -->
+    <!-- nav区域开始 -->
+    <section class="nav">
+        <div class="container">
+            <a href="javascript:;" class="fl">首页</a>
+            <a href="javascript:;" class="fl">按医院挂号</a>
+            <a href="javascript:;" class="fl">按科室挂号</a>
+            <a href="javascript:;" class="fl">按疾病挂号</a>
+            <a href="javascript:;" class="fl">最新公告</a>
+            <a href="javascript:;" class="fr">社会知名医院</a>
+        </div>
+    </section>
+    <!-- nav区域结束 -->
+    <!-- 医院简介区域开始 -->
+    <div class="container">
+        <section class="descript">
+            <div class=descript-top>
+                <h2 class=descript-title>北京协和医院</h2>
+                <span class="subscribe">关注医院</span>
+                <p class="descript-top-right fr"><span class="descript--blue">等级</span>:三级甲等<span class="descript--blue">区域</span>:东城区<span class="descript--blue">分类</span>:中国医科院所属医院</p>
+            </div>
+            <div class="descript-bottom">
+                <div class="descript--img"></div>
+                <ul class="descript-info">
+                    <li>
+                        <i class="descript-icon icon1"></i><span class="descript-info-text">[东院]北京市东城区帅府园一号  [西院]北京市西城区大木仓胡同41号</span></li>
+                    <li><i class="descript-icon icon2"></i><span class="descript-info-text">http://www.punch.cn/</span></li>
+                    <li><i class="descript-icon icon3"></i><span class="descript-info-text">东院咨询台：010-69155584；西院咨询台：010-69158010</span></li>
+                    <li>
+                        <div class="wrapIcon"><i class="descript-icon icon4"></div></i><span class="descript-info-text">东院：106，108，110，111，116，684，685到东单路口北；41，104快，814到东单路口南；1，52，728，802到东单路口西；20，25，37，39到东单路口东；<br/> 103，104，420，003到新东安市场；地铁1、号线到东单。西院：68到辟才胡同东口；更多乘车路线详见须知
+                    </span></li>
+                </ul>
+                <iframe src="map.html" width="250" height="165" frameborder="0" scrolling="no"></iframe>
+
+                </div>
+        </section>
+        <!-- 医院简介区域结束 -->
+
+        <!-- 排班表区域开始 -->
+
+        <div class="time-text">
+            <span>科室排班表</span>
+            <span class="return">返回科室列表</span>
+        </div>
+
+        <div class="timeTable-box">
+
+            <div class="timeTable">
+                <div class="timeTable-left">
+                    <div class="timeTable-icon"></div>
+                    <p>上午</p>
+                    <p>下午</p>
+                    <p>晚上</p>
+                </div>
+                <div class="timeTable-main">
+                    <div class="timeTable-table">
+                        <div class="first-line"></div>
+                        <div class="second-line"></div>
+                        <div class="third-line"></div>
+                        <div class="forth-line"></div>
+
+                    </div>
+                </div>
+                <div class="timeTable-right">
+                    <div class="timeTable-iconR"></div>
+                    <div class="timeTable-spacing"></div>
+                </div>
+            </div>
+
+            <div class="timeTable-discript">
+
+                <p class="mainOne-container-title--p">预约规则</p>
+
+
+
+                <p class="mainOne-container--p">预约周期:</p>
+                <p class="mainOne-container--2p">7天</p>
+
+                <p class="mainOne-container--p">放号时间:</p>
+                <p class="mainOne-container--2p">8:30</p>
+
+                <p class="mainOne-container--p">停挂时间:</p>
+                <p class="mainOne-container--2p">下午14:00停止次日预约挂号(下午14:0停止次日预约挂号)</p>
+
+                <p class="mainOne-container--p">退号时间:</p>
+                <p class="mainOne-container--2p">就诊前一工作日14:00前取消</p>
+
+                <p class="mainOne-container--p">特殊规则:</p>
+                <p class="mainOne-container--2p"><br/>①取号地点不同:西院区预约号取号地点:西院区门诊楼层大厅挂号窗囗取号6东院区预约号取号地点:东移区老门诊楼层大厅拄号窗口或新门诊楼各楼层号收费商口取号</p>
+
+            </div>
+            <div class="timeTable-bottom">
+                <p>&#9888;您还没有选择就诊日期</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyrights &copy; 2017慕课网版权所有</p>
+    </footer>
+
+
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript" async></script>
+
+
+</body>
+
+</html>
