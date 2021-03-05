@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="highcharts.css" />
+
+    <title>Highcharts Example</title>
+
+    <style type="text/css">
+        .wrapper {
+            width: 100%;
+            height: 686px;
+            position: relative;
+        }
+        
+        #top {
+            height: 71px;
+            margin-bottom: 46px;
+        }
+        
+        #top p {
+            font-size: 12px;
+            font-weight: bolder;
+            margin-top: 16px;
+        }
+        
+        #father {
+            position: absolute;
+            left: 200px;
+            top: 0;
+        }
+        
+        #time {
+            margin-left: 279px;
+            margin-top: 10px;
+        }
+        
+        .time {
+            font-size: 12px;
+        }
+        
+        .month {
+            margin-left: 34px;
+        }
+        
+        select {
+            width: 107px;
+            height: 28px;
+            background-color: #F5F5F5;
+            border: 1px solid #D9D9D9;
+            color: #B8B8B9;
+            border-radius: 2px;
+            letter-spacing: 1.4px;
+        }
+        
+        .firstBox {
+            width: 12%;
+            float: left;
+            height: 100%;
+        }
+        
+        .secondbox {
+            width: 60%;
+            float: left;
+        }
+        
+        #container {
+            height: 550px;
+            width: 100%;
+            margin: 0 auto;
+            /* width: 672px; */
+            /* position: absolute;
+            left: 50%; */
+            /* margin-left: -336px; */
+        }
+        
+        #container2 {
+            height: 550px;
+            /* width: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+    <script src="highcharts.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
+
+    <!-- <script src="../../code/modules/exporting.js"></script>
+    <script src="../../code/modules/export-data.js"></script>
+    <script src="../../code/modules/accessibility.js"></script> -->
+
+    <div class="wrapper">
+        <div id="top">
+            <p>构成明细</p>
+            <form id="father">
+                <input type="button" value="1" id="one" />
+                <input type="button" value="2" id="two" />
+                <input type="button" value="3" id="thr" />
+            </form>
+            <div id="time">
+                <span class="time year">年份</span>
+                <select>
+                <option value='' disabled selected style='display:none;' class="placehold">选择年份</option>  
+                <option value ="2020">2020</option>
+                </select>
+                <span class="time month">月份</span>
+                <select>
+                <option value='' disabled selected style='display:none;' class="placehold">选择月份</option> 
+                <option value="Jan">一月</option>
+                <option value="Feb">二月</option>
+                <option value="Mar">三月</option>
+                <option value="Apr">四月</option>
+                <option value="May">五月</option>
+                <option value="Jun">六月</option>
+                <option value="Jul">七月</option>
+                <option value="Aug">八月</option>
+                <option value="Sep">九月</option>
+                <option value="Oct">十月</option>
+                <option value="Nov">十一月</option>
+                <option value="Dec">十二月</option>
+                </select>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="firstBox">
+            <div id="container"></div>
+        </div>
+        <div class="secondBox">
+            <div id="container2"></div>
+        </div>
+
+
+
+    </div>
+
+
+    <script type="text/javascript">
+        createChart1("columnData.json");
+    </script>
+
+
+</body>
+
+</html>

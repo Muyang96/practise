@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- header部分开始 -->
+    <header>
+        <section class="header_content" id="root">
+            <div class="logo">
+                <img src="img/logo.png" />
+                <h1 class="logoName">慕课高铁客户服务中心&nbsp;|&nbsp;<span>客户服务</span></h1><span class="feedback">意见反馈</span><a class="feedbackL" href="#">imooc.com</a>
+                <p class="login">您好，请<span>登陆</span>&nbsp;|&nbsp;注册</p>
+                <div class="navList" @mouseover="mouseoverEvent" @mouseleave="mouseleaveEvent" ref="navList">我的IMOOC
+                    <span class="navList_trangle" :style="active"></span>
+                    <ul class="navList-items" v-show="show">
+                        <nav-list v-for="(item, index) of list" :key="index" :content="item" :index="index" class="navList-item" ref="navListItem" @change-color="handleColor" @return-color="returnColor">
+                        </nav-list>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="mobileImage"></div>
+                <p class="mobileText">手机版</p>
+            </div>
+        </section>
+    </header>
+    <!-- header部分结束 -->
+    <!-- 主体部分开始 -->
+    <section class="main" id="main">
+        <p class="main-toptext">您现在的位置：<span class="grey">客运首页</span>&nbsp;>&nbsp;<span class="grey">注册</span></p>
+
+        <section class="accountInfo">
+            <h2>账户信息</h2>
+            <div class="infoArea">
+                <ul>
+                    <div class=passBoxes>
+                        <div class="passBox"></div>
+                        <div class="passBox" ref="secondBox"></div>
+                        <div class="passBox" ref="thirdBox"></div>
+                    </div>
+                    <p class="userNameRules" ref="rules" @mouseover="mouseoverEvent" @mouseleave="mouseleaveEvent">姓名填写规则</p>
+                    <div class="block" v-show="showb">
+                        <rules-block v-for="(item,index) of textList" :key="index" :rules="item" :index="index" class="rulesItem"></rules-block>
+                    </div>
+                    <form id="fatherElem">
+                        <account-list v-for="(item, index) of list" :key="index" :content="item" :index="index" @show-text="showText"></account-list>
+                        <input type="checkbox" class="checkBox">我已阅读并同意遵守<span class="blue">《中国铁路服务中心网站服务条款》</span>
+                    </form>
+                    <button class="submit" @click="jump">下一步</button>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </section>
+    <footer>
+        <p>关于我们 | 网站声明</p>
+        <p>Copyright &copy; 2017&nbsp;imooc.com All Rights Reserved | 京ICP备 13046642号-2</p>
+    </footer>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/setting.js" type="text/javascript"></script>
+
+</body>
+
+</html>

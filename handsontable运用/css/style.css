@@ -1,0 +1,25 @@
+.tableContent {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p .titleName {
+    font-size: 20px;
+}
+
+p .titleTime {
+    font-size: 20px;
+}
+
+
+/* 
+.handsontable th {
+    background-color: transparent;
+} */
+
+
+/* 
+#tableC::-webkit-scrollbar {
+    width: 0;
+} */

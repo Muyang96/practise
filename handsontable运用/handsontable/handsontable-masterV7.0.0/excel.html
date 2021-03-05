@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>handsontable excel</title>
+<script src="/springmvc/resources/plugins/handsontable-masterV7.0.0/handsontable-master/dist/handsontable.full.min.js"></script>
+<link href="/springmvc/resources/plugins/handsontable-masterV7.0.0/handsontable-master/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+
+
+
+</head>
+<body>
+<div id="example1" style="height: 200px;width: 300px;background-color: red;border: red solid 1px;"></div>
+
+<script type="text/javascript">
+var
+myData = Handsontable.helper.createSpreadsheetData(100, 26),
+container = document.getElementById('example1'),
+hot;
+
+hot = new Handsontable(container, {
+data: myData,
+width: 700,
+height: 500,
+rowHeaders: true,
+colHeaders: true,
+colWidths: 100,
+fixedColumnsLeft: 2,
+contextMenu: false,
+manualColumnFreeze: true,
+fixedRowsTop: 3,
+fixedRowsBottom: 2,
+licenseKey: 'non-commercial-and-evaluation'
+});
+//$("#hot-display-license-info").hide();
+</script>
+</body>
+</html>
